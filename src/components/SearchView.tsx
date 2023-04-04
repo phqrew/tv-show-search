@@ -28,45 +28,43 @@ function SearchView() {
   };
 
   return (
-    <div className="">
-      <h1 className="text-3xl">TV Show Search</h1>
-      <br />
-      <label>
-        Type in the name of the TV show you want to search for in the search bar
-        and press the "Search" button. Click on the Title to view the details of
-        the TV show.
-      </label>
-      <br />
+    <div className="container mx-auto py-6">
+      <h1 className="text-2xl font-bold mb-6">TV Show Search</h1>
       <form onSubmit={handleSearch}>
-        <input
-          className="shadow appearance-none border rounded
-         text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="query"
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <button
-          className="shadow bg-purple-500 hover:bg-purple-400 
-          focus:shadow-outline focus:outline-none text-white 
-          font-bold py-1 px-2 rounded"
-          type="submit"
-          disabled={loading}
-        >
-          Search
-        </button>
+        <div className="mb-4">
+          <input
+            className="border border-gray-400 px-4 py-2 w-full mb-2"
+            id="query"
+            type="text"
+            placeholder="Search for a tv show"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            type="submit"
+            disabled={loading}
+          >
+            Search
+          </button>
+        </div>
       </form>
-      <br />
       {loading && <p>Loading results...</p>}
       {error && <p>{error}</p>}
-      {results.map((show) => (
-        <div key={show.id}>
-          <Link to={`/detail/${show.id}`}>
-            <h2 className="text-3xl">{show.name}</h2>
-          </Link>
-          {show.image && <img src={show.image.medium} alt={show.name} />}
-        </div>
-      ))}
+      <div className=" flex flex-wrap mb-4">
+        {results.map((show) => (
+          <div className="border-4 border-transparent" key={show.id}>
+            <Link to={`/detail/${show.id}`}>
+              <h2 className="text-3xl">{show.name}</h2>
+            </Link>
+            {show.image && (
+              <Link to={`/detail/${show.id}`}>
+                <img src={show.image.medium} alt={show.name} />
+              </Link>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
