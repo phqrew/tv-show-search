@@ -28,12 +28,12 @@ function SearchView() {
   };
 
   return (
-    <div className="container mx-auto py-6">
+    <div className="container mx-auto py-6 px-4">
       <h1 className="text-2xl font-bold mb-6">TV Show Search</h1>
       <form onSubmit={handleSearch}>
         <div className="mb-4">
           <input
-            className="border border-gray-400 px-4 py-2 w-full mb-2"
+            className="border border-gray-400 px-4 py-2 w-2/4 mb-2"
             id="query"
             type="text"
             placeholder="Search for a tv show"
