@@ -26,12 +26,13 @@ function DetailView() {
     fetchShow();
   }, [id]);
 
-  if (loading) return <p>Loading details...</p>;
+  if (loading)
+    return <p>Your internet connection is slow. Loading details...</p>;
   if (error) return <p>{error}</p>;
   if (!show) return null;
 
   return (
-    <div>
+    <div className="px-5 py-4 ">
       <h1 className="text-3xl">{show.name}</h1>
       <br />
       <div dangerouslySetInnerHTML={{ __html: show.summary }} />

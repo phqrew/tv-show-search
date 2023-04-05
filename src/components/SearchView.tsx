@@ -49,21 +49,21 @@ function SearchView() {
           </button>
         </div>
       </form>
-      {loading && <p>Loading results...</p>}
+      {loading && <p>Your internet connection is slow. Loading results...</p>}
       {error && <p>{error}</p>}
-      <div className=" flex flex-wrap mb-4">
-        {results.map((show) => (
-          <div className="border-4 border-transparent" key={show.id}>
-            <Link to={`/detail/${show.id}`}>
-              <h2 className="text-3xl">{show.name}</h2>
-            </Link>
-            {show.image && (
+      <div className="container px-5 py-4 flex flex-wrap">
+        {results.map((show) =>
+          show.image ? (
+            <div className="h-full p-4 lg:w-1/3" key={show.id}>
+              <Link to={`/detail/${show.id}`}>
+                <h2 className="text-l font-bold">{show.name}</h2>
+              </Link>
               <Link to={`/detail/${show.id}`}>
                 <img src={show.image.medium} alt={show.name} />
               </Link>
-            )}
-          </div>
-        ))}
+            </div>
+          ) : null
+        )}
       </div>
     </div>
   );
