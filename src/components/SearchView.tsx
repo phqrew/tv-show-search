@@ -34,7 +34,7 @@ function SearchView() {
       <form onSubmit={handleSearch}>
         <div className="mb-4">
           <input
-            className="border border-gray-400 px-4 py-2 w-2/4 rounded"
+            className="border border-gray-400 bg-gray-200 px-4 py-2 w-2/4 rounded"
             id="query"
             type="text"
             placeholder="Search for a tv show"
@@ -42,7 +42,7 @@ function SearchView() {
             onChange={(e) => setQuery(e.target.value)}
           />
           <button
-            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 mx-2 rounded"
+            className="bg-red-500 hover:bg-red-700 text-gray-200 font-bold py-2 px-4 mx-2 rounded"
             type="submit"
             disabled={loading}
           >
