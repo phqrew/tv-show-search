@@ -23,6 +23,7 @@ function App() {
 
   return (
     <div>
+      <p className="text-white dark:text-blue-600"> Dark/Light</p>
       <div className="text-right">
         <button
           onClick={toggleColorMode}
