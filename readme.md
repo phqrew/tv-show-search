@@ -19,10 +19,6 @@ To use the application, follow these steps:
 
 Vite, React, Typescript, Tailwind and Axios
 
-## Improvements
-
-The application currently has minimal styling. Error handling could also be improved.
-
 ## Version 2 (2023-04-19)
 
 - More appropriate colors and style.
