@@ -34,12 +34,16 @@ function DetailView() {
   return (
     <div className="px-5 py-4 bg-gradient-to-b from-black to-red-900">
       <h1 className="text-3xl text-gray-200 mb-4">{show.name}</h1>
-      <div className="mb-2">
-        <span className="text-l text-gray-200 font-bold ">Official site: </span>
-        <a className="text-l text-gray-200" href={show.officialSite}>
-          {show.officialSite}
-        </a>
-      </div>
+      {show.officialSite ? (
+        <div className="mb-2">
+          <span className="text-l text-gray-200 font-bold ">
+            Official site:{" "}
+          </span>
+          <a className="text-l text-gray-200" href={show.officialSite}>
+            {show.officialSite}
+          </a>
+        </div>
+      ) : null}
       <div className="mb-2">
         <span className="text-l text-gray-200 font-bold ">
           Year of release: {show.premiered}
