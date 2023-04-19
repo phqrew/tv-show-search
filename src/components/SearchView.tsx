@@ -52,7 +52,7 @@ function SearchView() {
       </form>
       {loading ? <Loading /> : null}
       {error && <p className="text-l text-gray-200 p-2 font-bold">{error}</p>}
-      <div className="container py-4 flex flex-wrap">
+      <div className="container py-4 flex flex-wrap justify-center items-center">
         {results.map((show) =>
           show.image ? (
             <div className="h-full p-4 lg:w-1/3" key={show.id}>
