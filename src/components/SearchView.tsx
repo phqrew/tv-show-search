@@ -55,9 +55,9 @@ function SearchView() {
       <div className="container py-4 flex flex-wrap justify-center items-center">
         {results.map((show) =>
           show.image ? (
-            <div className="h-full p-4 lg:w-1/3" key={show.id}>
+            <div className="p-4" key={show.id}>
               <Link to={`/detail/${show.id}`}>
-                <p className="text-l text-gray-200 py-2 font-bold text-center w-40">
+                <p className="text-l text-gray-200 py-2 ml-5 font-bold text-center w-40">
                   {show.name}
                 </p>
               </Link>
