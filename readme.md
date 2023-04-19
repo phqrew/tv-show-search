@@ -22,3 +22,17 @@ Vite, React, Typescript, Tailwind and Axios
 ## Improvements
 
 The application currently has minimal styling. Error handling could also be improved.
+
+## Version 2 (2023-04-19)
+
+- More appropriate colors and style.
+
+- Numerous layout fixes
+
+- Some more info in the details view
+
+- The spinner that shows when a connection is slow, is now moved into a separate component
+
+- Work begun on a dark/light mode feature, but not finished due to time constraint.
+
+Please note: The back button and going to specific TV-shows with their URL only works when the app is installed and run locally or on a dedicated server, due to Vercels proxy handling

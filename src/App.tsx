@@ -26,7 +26,8 @@ function App() {
       <div className="text-right">
         <button
           onClick={toggleColorMode}
-          className=" self-end text-white rounded-full p-4 mx-2 my-1 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400"
+          className=" self-end text-white rounded-full p-4 mx-2 my-1 hover:bg-gray-700 
+          focus:outline-none focus:ring-2 focus:ring-gray-400"
         >
           {colorMode === "light" ? (
             <MoonIcon className="h-5 w-5" />
