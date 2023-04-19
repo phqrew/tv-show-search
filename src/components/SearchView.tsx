@@ -51,15 +51,15 @@ function SearchView() {
         </div>
       </form>
       {loading ? <Loading /> : null}
-      {error && <p>{error}</p>}
+      {error && <p className="text-l text-gray-200 p-2 font-bold">{error}</p>}
       <div className="container py-4 flex flex-wrap">
         {results.map((show) =>
           show.image ? (
             <div className="h-full p-4 lg:w-1/3" key={show.id}>
               <Link to={`/detail/${show.id}`}>
-                <h2 className="text-l text-gray-200 p-2 font-bold">
+                <p className="text-l text-gray-200 py-2 font-bold text-center w-40">
                   {show.name}
-                </h2>
+                </p>
               </Link>
               <Link to={`/detail/${show.id}`}>
                 <img src={show.image.medium} alt={show.name} />

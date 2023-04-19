@@ -27,7 +27,8 @@ function DetailView() {
   }, [id]);
 
   if (loading) return <Loading />;
-  if (error) return <p>{error}</p>;
+  if (error)
+    return <p className="text-l text-gray-200 p-2 font-bold">{error}</p>;
   if (!show) return null;
 
   return (
